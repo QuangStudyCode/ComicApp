@@ -39,6 +39,7 @@ public class Adapter_Pdf_User extends RecyclerView.Adapter<Adapter_Pdf_User.Hold
     }
     public static final long Max_Byte_Pdf = 50000000;
 
+//    dùng để gán giá trị vào các view tương ứng
     @Override
     public void onBindViewHolder(@NonNull Adapter_Pdf_User.HolderPdfUser holder, int position) {
         Pdf model = pdfArrayList.get(position);
@@ -78,8 +79,6 @@ public class Adapter_Pdf_User extends RecyclerView.Adapter<Adapter_Pdf_User.Hold
 
 
     public static class HolderPdfUser extends RecyclerView.ViewHolder{
-
-
         private PDFView pdfView;
         private TextView TvTitleUser,TvDecreptionUser,TvDateUser;
         private ProgressBar progress_circularUser;

@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.main_tool_bar);
+
         navigationView = findViewById(R.id.navigation_View);
         drawerLayout = findViewById(R.id.main_layout);
 
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
     //    event for popup Navigation drawer
     private void Event_toolBar() {
         toolbar = (Toolbar) findViewById(R.id.main_tool_bar);
+//        setSuport.. khi được sử dụng sẽ giúp activity hiểu được yêu cầu
         setSupportActionBar(toolbar);
 //        pop up out main_activity
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -114,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         Adapter_Main adapter_main = new Adapter_Main(this);
         viewPager2.setAdapter(adapter_main);
 
-//        hàm này dùng để link fragment với các bottom tương ứng đóa
+//        hàm này dùng để link fragment với các bottom tương ứng
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {

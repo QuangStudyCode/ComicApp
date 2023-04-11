@@ -110,8 +110,10 @@ public class DetailBooks extends AppCompatActivity {
 
     public static final long Max_Byte_Pdf2 = 50000000;
 
+
     private void LoadBookDetails() {
         incrementBook(bookId);
+
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Books");
         ref.child(bookId)
                 .addValueEventListener(new ValueEventListener() {
@@ -155,7 +157,7 @@ public class DetailBooks extends AppCompatActivity {
                                         double mb = kb/1024;
 
                                         if(mb>=1){
-//                                      .2f là định dạng float. sẽ lấy 2 số lẻ sau dấu phẩy.
+//                                      .2f là định dạng float. sẽ lấy 2 số sau dấu phẩy.
                                             sizeBook.setText(String.format("%.2f",mb)+"MB");
                                         }else if(kb>=1){
                                             sizeBook.setText(String.format("%.2f",kb)+"KB");

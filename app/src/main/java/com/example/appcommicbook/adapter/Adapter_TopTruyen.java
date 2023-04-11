@@ -56,8 +56,8 @@ public class Adapter_TopTruyen extends RecyclerView.Adapter<Adapter_TopTruyen.Ho
                                 .pages(0)
                                 .swipeHorizontal(false)
                                 .spacing(0)
-                                .enableSwipe(false)
                                 .load();
+
                         holder.progressBarTT.setVisibility(View.INVISIBLE);
                     }
                 });

@@ -91,6 +91,8 @@ public class loginFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         btnLogin = (Button) view.findViewById(R.id.LG_BtnLogin);
+
+
         edtEmail = (EditText) view.findViewById(R.id.LG_Email);
         edtPassEmail = (EditText) view.findViewById(R.id.LG_Password);
         cbLogin = (CheckBox) view.findViewById(R.id.LG_CheckBox);

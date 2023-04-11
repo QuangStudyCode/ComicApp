@@ -90,4 +90,5 @@ public class Adapter_Fragment_Topmic extends RecyclerView.Adapter<Adapter_Fragme
             txtView = itemView.findViewById(R.id.txtTitle_fragment_top_comic);
         }
     }
+
 }

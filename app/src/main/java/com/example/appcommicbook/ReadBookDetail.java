@@ -64,6 +64,7 @@ public class ReadBookDetail extends AppCompatActivity {
 
     private long Max_byte = 5000000;
     private void LoadPdf(String url) {
+
         StorageReference reference = FirebaseStorage.getInstance().getReferenceFromUrl(url);
 //tải xuống dữ liệu
 //       truyền vào một một kích thước tối đa cho phép ngăn tình trạng thiếu
