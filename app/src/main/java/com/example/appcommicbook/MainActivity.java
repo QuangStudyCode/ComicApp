@@ -143,9 +143,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    Khai báo ra một hàm dùng để reselected nghĩa là sẽ dùng hàm setOnNavigationItemSelectedListener và truyền vào nó hàm
-//    Reselected . Hàm này nó sẽ có chức năng là sẽ trả ngược lại khi click vào bottom thì sẽ trả ngược lại cái
-//    thằng fragment tương ứng của nó.
 
     private BottomNavigationView.OnNavigationItemSelectedListener ReselectedItem
             = item -> {

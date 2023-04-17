@@ -68,8 +68,6 @@ public class signupFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
     }
 
 //    Các bước xử lý đăng ký tài khoản Email

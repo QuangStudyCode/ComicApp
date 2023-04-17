@@ -42,6 +42,8 @@ public class ReadBookDetail extends AppCompatActivity {
         imgBack = findViewById(R.id.img_back_Readbook);
         back();
         LoadUrlPDF();
+
+//        myViewPdf.fromAsset("DeathintheFamily.pdf").load();
     }
 
     private void LoadUrlPDF() {
@@ -63,6 +65,7 @@ public class ReadBookDetail extends AppCompatActivity {
     }
 
     private long Max_byte = 5000000;
+
     private void LoadPdf(String url) {
 
         StorageReference reference = FirebaseStorage.getInstance().getReferenceFromUrl(url);

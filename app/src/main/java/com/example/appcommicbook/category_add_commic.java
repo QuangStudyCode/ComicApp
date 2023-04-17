@@ -27,6 +27,7 @@ public class category_add_commic extends AppCompatActivity {
     private EditText editText;
     private FirebaseAuth firebaseAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +64,6 @@ public class category_add_commic extends AppCompatActivity {
 //        before put data u need to get data
         long timeStamp = System.currentTimeMillis();
 
-//      set some inf, Using hasmap with key<String> and type value is Object
         HashMap<String , Object> hashMap= new HashMap<>();
 
         hashMap.put("id", ""+timeStamp);
@@ -73,7 +73,7 @@ public class category_add_commic extends AppCompatActivity {
 
 //                  start Add(setting) from Database root>Categories>categoryID>cgrINF
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Categories");
-//        TimeStamp la cai moc thoi gian htai
+
         ref.child(""+timeStamp)
                 .setValue(hashMap)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {

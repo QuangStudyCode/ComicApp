@@ -56,6 +56,7 @@ public class DashboardAdminActivity extends AppCompatActivity {
         addPdf();
 //        getTextForAD();
         LoadCategory();
+
     }
 
     private void LoadCategory() {
@@ -113,11 +114,6 @@ public class DashboardAdminActivity extends AppCompatActivity {
         });
     }
 
-    private void getTextForAD() {
-        Intent intent = getIntent();
-        String nameAD = intent.getStringExtra("emailAdmin");
-        textView.setText(nameAD);
-    }
 
     private void addPdf(){
         floatingActionButton.setOnClickListener(new View.OnClickListener() {

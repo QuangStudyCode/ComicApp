@@ -84,6 +84,7 @@ public class DetailBooks extends AppCompatActivity {
                         if(viewCount.equals("")|| viewCount.equals("null")){
                             viewCount="0";
                         }
+
                             long newViewCount = Long.parseLong(viewCount)+1;
                             HashMap<String ,Object> hashMap = new HashMap<>();
 

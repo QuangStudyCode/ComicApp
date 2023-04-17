@@ -48,7 +48,6 @@ public class addPdf extends AppCompatActivity {
 
     private Uri pdfUri=null;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -187,7 +186,7 @@ public class addPdf extends AppCompatActivity {
     private void LoadCategory() {
         categoryIDArrayList = new ArrayList<>();
         categoryTitleArrayList = new ArrayList<>();
-//        wanna thao tác với dữ liệu thì cần phải khai báo ra database dùng để tham chiếu tới các nut của csdl JSON
+
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Categories");
 
         ref.addValueEventListener(new ValueEventListener() {
@@ -196,12 +195,10 @@ public class addPdf extends AppCompatActivity {
                 categoryIDArrayList.clear();
                 categoryTitleArrayList.clear();
 
-//                gán dữ liệu vừa đọc được từ firebase về và gán vô arraylist
                 for (DataSnapshot ds:snapshot.getChildren()){
                     String categoryId = ""+ds.child("id").getValue();
 
                     String categoryTitle = ""+ds.child("category").getValue();
-
 
 //                    add vào Arraylist
                     categoryIDArrayList.add(categoryId);
@@ -213,7 +210,6 @@ public class addPdf extends AppCompatActivity {
 
             }
         });
-
     }
 
     @Override

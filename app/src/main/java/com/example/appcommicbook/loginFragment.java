@@ -90,8 +90,9 @@ public class loginFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        btnLogin = (Button) view.findViewById(R.id.LG_BtnLogin);
 
+
+        btnLogin = (Button) view.findViewById(R.id.LG_BtnLogin);
 
         edtEmail = (EditText) view.findViewById(R.id.LG_Email);
         edtPassEmail = (EditText) view.findViewById(R.id.LG_Password);
@@ -114,14 +115,14 @@ public class loginFragment extends Fragment {
         String nameSave = myPref.getString("name", "");
         String passSave = myPref.getString("pass", "");
 
+
         edtEmail.setText(nameSave);
         edtPassEmail.setText(passSave);
 
         tvDangKy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(),signupFragment.class);
-                startActivity(intent);
+                startActivity(new Intent(getContext(),signupFragment.class));
             }
         });
 
@@ -131,11 +132,6 @@ public class loginFragment extends Fragment {
                 Login();
             }
         });
-        //      sử dụng putExtra for send data to DashboardAdminActivity
-//        String emailForDashBoard = edtEmail.getText().toString();
-//        Intent i = new Intent(getContext(), DashboardAdminActivity.class);
-//        i.putExtra("emailAdmin", emailForDashBoard);
-//        startActivity(i);
         return view;
     }
 
@@ -173,9 +169,7 @@ public class loginFragment extends Fragment {
                             }else{
                                 editor.putString("name","");
                                 editor.putString("email","");
-
                             }editor.commit();//commit dùng để đồng bộ và lưu kết quả thành công
-
 
                             Toast.makeText(getActivity(),"Hi, Bạn đã đăng nhập thành công",Toast.LENGTH_LONG).show();
 

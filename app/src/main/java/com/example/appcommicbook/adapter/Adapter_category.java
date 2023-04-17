@@ -31,8 +31,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-//trong recycle RecycleView thì nó có một lớp RecyclerView.Adapter và nó luôn yêu cầu một iner class đó chính
-//là ViewHolder.
 public class Adapter_category extends RecyclerView.Adapter<Adapter_category.HolderCategory>{
 
     private final Context context;
@@ -51,7 +49,6 @@ public class Adapter_category extends RecyclerView.Adapter<Adapter_category.Hold
         return new HolderCategory(itemView);
     }
 
-//   dùng để gắn data vào view
     @Override
     public void onBindViewHolder(@NonNull HolderCategory holder, int position) {
         Category model = categoryArrayList.get(position);
@@ -139,9 +136,6 @@ public class Adapter_category extends RecyclerView.Adapter<Adapter_category.Hold
        return categoryArrayList.size();
     }
 
-//    có tác dụng là chuyển đổi đối tượng được định nghĩa lên từng row của view
-//    sự khác nhau giữa re và list là Re nó có thêm View Holder cái này dùng để tránh những lần gọi hàm findViewById thường xuyên
-//    khi cuộn listView và sẽ làm cho nó smooth hơn
 
     public class HolderCategory extends RecyclerView.ViewHolder{
         protected TextView TvCategory;

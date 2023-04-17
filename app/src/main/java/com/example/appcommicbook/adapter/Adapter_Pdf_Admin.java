@@ -66,11 +66,8 @@ public class Adapter_Pdf_Admin extends RecyclerView.Adapter<Adapter_Pdf_Admin.Ho
         return new HolderPdfAdmin(itemView);
     }
 
-//    Phương thức này dùng để gắn data và view.
     @Override
     public void onBindViewHolder(@NonNull HolderPdfAdmin holder, int position) {
-//        sử dụng mảng này để đổ dữ liệu vào mảng , nghĩa là ở bên Acivity chính ta sẽ Load data về và truyền vào mảng(giống cái tham số ở hàm tạo) rồi gán
-//        vào mảng và đổ ra
         Pdf model = pdfArrayList.get(position);
 
         String title = model.getTitle();
@@ -86,7 +83,6 @@ public class Adapter_Pdf_Admin extends RecyclerView.Adapter<Adapter_Pdf_Admin.Ho
 
         LoadPdfSize(model,holder);
         LoadPdfFromUrl(model,holder);
-//        LoadDataFromFireBase(model,holder);
 
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,6 +174,7 @@ public class Adapter_Pdf_Admin extends RecyclerView.Adapter<Adapter_Pdf_Admin.Ho
     //    hàm này dùng để set pdfView
     public static final long Max_Byte_Pdf = 50000000;
     private void LoadPdfFromUrl(Pdf model, HolderPdfAdmin holder) {
+
         String pdfUrl = model.getUrl();
         StorageReference ref = FirebaseStorage.getInstance().getReferenceFromUrl(pdfUrl);
         ref.getBytes(Max_Byte_Pdf)
@@ -210,7 +207,7 @@ public class Adapter_Pdf_Admin extends RecyclerView.Adapter<Adapter_Pdf_Admin.Ho
                         double mb = kb/1024;
 
                         if(mb>=1){
-//                            .2f là định dạng float. sẽ lấy 2 số lẻ sau dấu phẩy.
+//                            .2f là định dạng float. sẽ lấy 2 số  sau dấu phẩy.
                             holder.TvSize.setText(String.format("%.2f",mb)+"MB");
                         }else if(kb>=1){
                             holder.TvSize.setText(String.format("%.2f",kb)+"KB");

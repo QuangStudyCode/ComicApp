@@ -34,7 +34,6 @@
             android:text="N/A"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
     </RelativeLayout>
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/myPdfViewReadBook"

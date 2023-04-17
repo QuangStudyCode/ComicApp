@@ -58,30 +58,28 @@
 
         <ImageView
             android:layout_weight="1"
-            android:id="@+id/imageView2"
+            android:id="@+id/img_btnFacebook"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-
             android:src="@drawable/testicon" />
 
         <ImageView
+            android:id="@+id/img_btnGoogle"
             android:layout_weight="1"
-            android:id="@+id/imageView5"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/img_google_demo" />
 
         <ImageView
+            android:id="@+id/img_btnTwiter"
             android:layout_weight="1"
-            android:id="@+id/imageView4"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/img_twiter_demo"
             app:layout_constraintHorizontal_weight="1" />
-
 
     </LinearLayout>
 
