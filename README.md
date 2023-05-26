@@ -15,11 +15,11 @@ This is a simple demo story reading app
 
 # Features
 
-1 Đăng ký
-2 Đăng nhập
-3 Đổi pass
-4 Top bảng xếp hạng truyện
-5 Chi tiết truyện
-6 Đọc truyện
-7 Thể loại truyện
-8 Tìm kiếm
+- Đăng ký\
+- Đăng nhập\
+- Đổi pass\
+- Top bảng xếp hạng truyện\
+- Chi tiết truyện\
+- Đọc truyện\
+- Thể loại truyện\
+- Tìm kiếm\
